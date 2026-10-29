@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#070b18">
+  <title>NEON VANGUARD | ساحة المستقبل</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines"></div>
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><div><strong>NEON VANGUARD</strong><small>ساحة القتال المستقبلية</small></div></div>
+      <div class="status"><span class="live-dot"></span> نظام القتال نشط</div>
+    </header>
+
+    <section class="hud">
+      <div class="hud-card"><span>النقاط</span><strong id="score">000000</strong></div>
+      <div class="hud-card wave-card"><span>الموجة</span><strong id="wave">01</strong></div>
+      <div class="hud-card"><span>الأعداء</span><strong id="enemies">00</strong></div>
+      <div class="health-card"><div class="health-label"><span>الدرع الحيوي</span><b id="healthText">100%</b></div><div class="health-track"><i id="healthBar"></i></div></div>
+    </section>
+
+    <section class="arena-wrap">
+      <div class="arena-heading"><span>منطقة الاشتباك // القطاع 07</span><span id="mission">المهمة: البقاء على قيد الحياة</span></div>
+      <div class="arena" id="arena">
+        <canvas id="gameCanvas" aria-label="ساحة لعبة القتال"></canvas>
+        <div class="crosshair" id="crosshair"></div>
+        <div class="overlay" id="overlay">
+          <div class="panel">
+            <div class="panel-icon">◈</div>
+            <p class="eyebrow">PROTOCOL 07 // ONLINE</p>
+            <h1 id="overlayTitle">استعد للقتال</h1>
+            <p id="overlayText">واجه موجات الروبوتات المهاجمة، واجمع النقاط وابقَ على قيد الحياة.</p>
+            <button id="startBtn">ابدأ المهمة <span>←</span></button>
+            <small>تحرك بالأسهم أو WASD — صوب بالماوس واضغط للإطلاق</small>
+          </div>
+        </div>
+        <div class="mobile-hint">استخدم عصا الحركة يساراً وزر الإطلاق يميناً</div>
+        <div class="mobile-controls">
+          <div class="joystick" id="joystick"><div class="stick" id="stick"></div></div>
+          <button class="fire-button" id="fireButton">✦<small>إطلاق</small></button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bottom-bar">
+      <span><i class="key">W A S D</i> الحركة</span><span><i class="key">MOUSE</i> التصويب</span><span><i class="key">CLICK</i> إطلاق</span>
+      <button id="pauseBtn" class="pause-btn">Ⅱ إيقاف مؤقت</button>
+    </footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
